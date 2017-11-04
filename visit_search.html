@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visit Search</title>
+		<link rel="stylesheet" href="assets/css/index.css" type="text/css"/>
+		<style>
+			body{
+				color:black!important;
+				float:left;
+				text-align:left!important;
+				padding:10px;
+			}
+		</style>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+   
+	</head>
+	
+	<body>
+		<h4>Visitation Search</h4>
+		<form name="vsearch" action="assets/php/visit_search.php" method="POST">
+		    <div name="pid" id="pid" value="<?php echo $_GET['pid'] ?>"></div>
+
+			<input type="text" id="pname" name="pname" placeholder="Patient Name.." style="width:25%; align:'left';">
+
+			<input type="text" id="sname" name="sname" placeholder="Doctor Name.." style="width:25%; align:'left';">
+
+			<input type="date" id="date" name="date" placeholder="Date.." style="width:25%; align:'left';">
+			
+			<button type="submit" name="svat" id="svat" style="width:25%; align:'right';">Apply</button>
+		</form>
+		<br><br>
+		<iframe src="assets/php/frame/Visit.html" style="align:center;height:70vh;width:80vw;background-color:white;">visit</iframe>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Schedule Update
+        </title>
+        <link rel="stylesheet" href="assets/css/index.css" type="text/css"/>
+        <style>
+            body{
+                color: black!important;
+                float: left;
+                text-align: left!important;
+                padding: 10px;
+            }
+        </style>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/js/add_sched.js"></script>
+    </head>
+    <body>
+        <h4>
+            Schedule Update
+        </h4>
+        <form name="sched" action="assets/php/add_sched.php" method="post" onsubmit="return validateForm();">
+            <label for="name">Name:</label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="Enter staff name as in the system..">
+
+            <br><br>
+
+            <label for="date">
+                Date:<br>
+            </label>
+            <input type="date" name="date">
+
+            <br><br>
+
+            <label for="stime">Shift start time:</label>
+            <br>
+            <select id="sth" width=25% name="sth">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="stm" width=25% name="stm">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+            <select id="stap" width=25% name="stap">
+                <option value="am">am</option>
+                <option value="pm">pm</option>
+            </select>
+
+            <br><br>
+            <label for="etime">Shift end time:</label>
+            <br>
+            <select id="eth" width=25% name="eth">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select id="etm" width=25% name="etm">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+            <select id="etap" width=25% name="etap">
+                <option value="am">am</option>
+                <option value="pm">pm</option>
+            </select>
+
+            <br><br>
+            <label for="oncall">Oncall Doctor name:</label>
+            <input type="text" id="oncall" name="oncall" placeholder="Enter the name of the oncall doctor..">
+            <button type="submit" name="addsched" id="addsched">
+                Submit
+            </button>
+        </form>
+    </body>
+</html>
